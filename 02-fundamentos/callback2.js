@@ -10,11 +10,11 @@ let salarios = [
 ];
 
 let getEmpleado = (id, callback) => {
-    let empleado = empleados.find(e => e.id === id);
-    if (!empleado) {
+    let empleadoDB = empleados.find(e => e.id === id);
+    if (!empleadoDB) {
         callback(`No existe un empleado con id: ${id}.`);
     } else {
-        callback(null, empleado);
+        callback(null, empleadoDB);
     }
 };
 

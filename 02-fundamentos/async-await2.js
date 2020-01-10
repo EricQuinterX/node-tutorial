@@ -1,12 +1,12 @@
 let empleados = [
-  { id: 1, nombre: 'Fernando' },
-  { id: 2, nombre: 'Melissa' },
-  { id: 3, nombre: 'Eric' }
+    { id: 1, nombre: 'Fernando' },
+    { id: 2, nombre: 'Melissa' },
+    { id: 3, nombre: 'Eric' }
 ];
 
 let salarios = [
-  { id: 1, salario: 1000 },
-  { id: 2, salario: 2000 }
+    { id: 1, salario: 1000 },
+    { id: 2, salario: 2000 }
 ];
 
 let getEmpleado = async (id) => {  
@@ -31,11 +31,11 @@ let getSalario = async (empleado) => {
     }
 }
 
-let getInformacion = async(id) => {
-  let empleado = await getEmpleado(id);
-  let resp = await getSalario(empleado);
+let getInformacion = async (id) => {
+    let empleado = await getEmpleado(id);
+    let resp = await getSalario(empleado);
 
-  return `${resp.nombre} tiene un salario de $${resp.salario}`
+    return `${resp.nombre} tiene un salario de $${resp.salario}`
 }
 
 getInformacion(3)
